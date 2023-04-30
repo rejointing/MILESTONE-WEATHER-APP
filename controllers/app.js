@@ -38,4 +38,10 @@ router.post('/', (req, res) => {
     res.redirect('/apps')
 })
 
+router.delete('/:arrayIndex', (req, res) => {
+    const { arrayIndex } = req.params
+    App.splice(arrayIndex, 1)
+    res.status(303).redirect('/apps')
+})
+
 module.exports = router

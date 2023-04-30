@@ -5,6 +5,8 @@ function New () {
     return ( 
     <Default> 
         <h2>Share a New Comment</h2> 
+        <div className="backButton">
+            <a href="/apps"><button>Back to Weather Daily</button></a></div>
         <form action='/apps' method='POST'> 
             <label htmlFor="username">User Name</label> 
             <input 
@@ -33,7 +35,8 @@ function New () {
         defaultChecked 
         /> 
         <br /> 
-        <input type="submit"/> </form> 
+        <input type="submit"/> 
+        </form> 
         </Default> 
     ) } 
 
