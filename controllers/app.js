@@ -24,7 +24,8 @@ router.get('/:arrayIndex', (req,res) => {
     const { arrayIndex } = req.params
     const index = Number(arrayIndex)
     res.render('show', {
-        app: App[index]
+        app: App[index],
+        index
     })
 })
 
