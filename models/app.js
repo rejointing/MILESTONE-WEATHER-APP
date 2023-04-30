@@ -1,6 +1,6 @@
 module.exports = [
     {
-        rate : 'One Star',
+        rate: 'One Star',
         subscriber: true
     },
     {

@@ -5,6 +5,11 @@ const appRoutes = require('./controllers/app')
 
 const app = express()
 
+// MIDDLEWARE
+app.set('views', __dirname + '/views')
+app.set('view engine', 'jsx')
+app.engine('jsx', require('express-react-views').createEngine())
+
 app.use('/apps', appRoutes)
 
 const PORT = process.env.PORT
