@@ -1,22 +1,32 @@
 module.exports = [
-    {
-        rate: 'One Star',
+    {   
+        username: 'JohnDoe',
+        city: 'New York',
+        comment: 'Nice Day',
         subscriber: true
     },
     {
-        rate: 'Two Stars',
+        username: 'FourSzns',
+        city: 'Colorado',
+        comment: 'Brrr. Too cold out!',
         subscriber: true
     },
     {
-        rate: 'Three Stars',
+        username: 'SunnyHunny',
+        city: 'Miami',
+        comment: 'Gorgeous weather all week!',
         subscriber: false
     },
     {
-        rate: 'Four Stars',
+        username: "CloverTrail",
+        city: 'California',
+        comment: 'Why is it so rainy?!',
         subscriber: false
     },
     {
-        rate: 'Five Stars',
+        username: "Anonymouse",
+        city: 'Gotham',
+        comment: 'Not too bad out',
         subscriber: true
     }
 

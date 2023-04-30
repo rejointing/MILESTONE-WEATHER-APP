@@ -5,12 +5,20 @@ function Default(html) {
     <html>
       <head>
         <title>Default</title>
+        <link rel='stylesheet' href='/style.css'/>
+        <link rel='stylesheet' href='/weather.js'/>
       </head>
       <body>
-        <h1>HTML Rendered!</h1>
+        <div className='wrapper'>
+            <header>
+                <h1>
+                    <a href='/apps'>WeatherDaily</a>
+                </h1>
+            </header>
         <div className="container">
             {html.children}
         </div>
+    </div>
       </body>
     </html>
   )
