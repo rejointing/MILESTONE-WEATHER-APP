@@ -77,7 +77,7 @@ function fetchWeatherData() {
   /*Fetch the data and dynamicaly add 
 the city name with template literals*/
   fetch(
-    `https://api.weatherapi.com/v1/current.json?key=e0c1a083d9094ababd0211848210510&q=${cityInput}`
+    `https://api.weatherapi.com/v1/current.json?key=ea7557a56cc148b48f863249232904&q=${cityInput}`
   )
     /*Take the data (Which is in JSON format) 
   and convert it to a regular JS object*/
@@ -134,7 +134,7 @@ the city name with template literals*/
       if (code == 1000) {
         /*Set the background image to 
       clear if the weather is clear*/
-        app.style.backgroundImage = `url(./images/${timeOfDay}/clear.jpeg)`;
+        app.style.backgroundImage = `url(./images/${timeOfDay}/clear.jpg)`;
         /*Change the button bg color 
       depending on if its day or night*/
         btn.style.background = "#e5ba92";
