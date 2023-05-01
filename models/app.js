@@ -18,13 +18,13 @@ module.exports = [
         subscriber: false
     },
     {
-        username: "CloverTrail",
+        username: 'CloverTrail',
         city: 'California',
         comment: 'Why is it so rainy?!',
         subscriber: false
     },
     {
-        username: "Anonymouse",
+        username: 'Anonymouse',
         city: 'Gotham',
         comment: 'Not too bad out',
         subscriber: true

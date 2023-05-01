@@ -39,6 +39,27 @@ router.post('/', (req, res) => {
     res.redirect('/apps')
 })
 
+router.get('/:arrayIndex/edit', (req, res) => {
+    const { arrayIndex } = req.params
+    const index = Number(arrayIndex)
+    res.render('edit', {
+        app: App[index],
+        index
+    })
+})
+
+//Update
+router.put('/:arrayIndex', (req, res) => {
+    const { arrayIndex } = req.params
+    if (req.body.subscriber === 'on') {
+        req.body.subscriber = true
+    } else {
+        req.body.subscriber = false
+    }
+    App[arrayIndex] = req.body
+    res.redirect(`/apps/${arrayIndex}`)
+})
+
 router.delete('/:arrayIndex', (req, res) => {
     const { arrayIndex } = req.params
     App.splice(arrayIndex, 1)

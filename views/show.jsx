@@ -6,8 +6,11 @@ function Show({ app, index }) {
         <Default>
             <h2>Show Page</h2>
             <h3>{app.comment}</h3>
-            <h3>{app.username}, {app.city}</h3>
-            <p>Subscriber: {String(app.subscriber)}</p>
+            <p>{String(app.username)}, {app.city}</p>
+            <p>Subscribed: {String(app.subscriber)}</p>
+            <a href={`/apps/${index}/edit`}>
+                <button>Edit</button>
+            </a>
             <form action={`/apps/${index}?_method=DELETE`} method="POST">
                 <input type='submit' value="DELETE"/>    
             </form>
