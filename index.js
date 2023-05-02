@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 require('dotenv').config()
 
-const appRoutes = require('./controllers/app')
+const commentsRoutes = require('./controllers/comments')
 
 const app = express()
 
@@ -18,7 +18,7 @@ app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 
 // Routes
-app.use('/apps', appRoutes)
+app.use('/apps', commentsRoutes)
 
 // db connection 
 mongoose.set('strictQuery', true)

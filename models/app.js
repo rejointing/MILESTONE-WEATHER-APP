@@ -27,4 +27,8 @@ const appSchema = new mongoose.Schema({
 
 })
 
+appSchema.methods.getPostBy = function() {
+    return `posted by ${this.username}, ${this.residency} of ${this.city}`
+}
+
 module.exports = mongoose.model('App', appSchema)

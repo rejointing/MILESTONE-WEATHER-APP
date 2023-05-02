@@ -6,7 +6,7 @@ function Show({ app }) {
         <Default>
             <h2>Show Page</h2>
             <h3>{app.comment}</h3>
-            <p>{String(app.username)}, {app.residency} of {app.city}</p>
+            <p>{app.getPostBy()}</p>
             <p>Subscribed: {app.subscriber}</p>
             <a href={`/apps/${app.id}/edit`}>
                 <button>Edit</button>

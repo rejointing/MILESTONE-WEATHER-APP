@@ -67,7 +67,7 @@
     "vary": "^1.1.2"
   },
   "scripts": {
-    "dev": "npx nodemon index.js"
+    "dev": "npx nodemon index.js -e js,jsx"
   },
   "repository": {
     "type": "git",

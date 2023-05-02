@@ -27,7 +27,12 @@ function Edit ({ app }) {
                 name="comment" 
                 id="comment"
                 defaultValue={app.comment}
-            /> 
+            />
+            <label htmlFor="residency">Residency</label>
+            <select name="residency" id="residency" defaultValue={app.residency}>
+                <option value="Resident">Resident</option>
+                <option value="Non-Resident">Non-Resident</option>
+            </select> 
             <label htmlFor="subscriber">Subscribed?</label> 
             <input 
                 type="checkbox" 

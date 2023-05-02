@@ -9,14 +9,6 @@ router.get('/', async (req, res) => {
     })
 })
 
-//router.get('/comments', (req, res) => {
-    // connect to DB - fetch real comments from DB
-    //res.send(([
-      //  {"comment": "Lots of rainfall!"},
-      //  {"comment": "Thunderstorm had golf ball sized hail!"}
-   // ]))
-//})
-
 router.get('/new', (req, res) => {
     res.render('new')
 })
@@ -29,27 +21,14 @@ router.get('/:id', async (req,res) => {
     })
 })
 
-// router.post('/', (req, res) => {
- //   try {
-        //const { username, city, comment } = req.body
-        //const createdComment = new Comment({
-            //username,
-            //city,
-            //comment
-        //}).save()
-
-        //res.json(createdComment)
-    //} catch (error) {
-        //console.log(error)
-        //res.json({ message: 'error creating comment '})
-    //}
-
+// hidden form field for timestamp around line 30
 router.post('/', async (req, res) => {
     if (req.body.subscriber === 'on') {
         req.body.subscriber = true
     } else {
         req.body.subscriber = false
     }
+    // timestamp req.body.timeStamp = currentTime
     await App.create(req.body)
     res.redirect('/apps')
 })
