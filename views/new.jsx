@@ -21,6 +21,11 @@ function New () {
         name="city" 
         id="city"
         />
+        <label htmlFor="residency">Residency</label>
+        <select name="residency" id="residency">
+            <option value="Resident">Resident</option>
+            <option value="Non-Resident">Non-Resident</option>
+        </select>
         <label htmlFor="comment">Comment</label> 
         <input 
         type="text" 

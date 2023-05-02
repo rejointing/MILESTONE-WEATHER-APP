@@ -1,33 +1,30 @@
-module.exports = [
-    {   
-        username: 'JohnDoe',
-        city: 'New York',
-        comment: 'Nice Day',
-        subscriber: true
+const mongoose = require('mongoose')
+
+const appSchema = new mongoose.Schema({
+    username: {
+        type: String,
+        required: true
     },
-    {
-        username: 'FourSzns',
-        city: 'Colorado',
-        comment: 'Brrr. Too cold out!',
-        subscriber: true
+
+    city: {
+        type: String,
+        required: true
     },
-    {
-        username: 'SunnyHunny',
-        city: 'Miami',
-        comment: 'Gorgeous weather all week!',
-        subscriber: false
+
+    comment: {
+        type: String,
+        required: true
     },
-    {
-        username: 'CloverTrail',
-        city: 'California',
-        comment: 'Why is it so rainy?!',
-        subscriber: false
+
+    subscriber: {
+        type: Boolean
     },
-    {
-        username: 'Anonymouse',
-        city: 'Gotham',
-        comment: 'Not too bad out',
-        subscriber: true
+
+    residency: {
+        type: String,
+        enum: ['Resident', 'Non-Resident']
     }
 
-]
+})
+
+module.exports = mongoose.model('App', appSchema)

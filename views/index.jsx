@@ -9,10 +9,10 @@ function Index ({ apps }) {
         <a href="/apps/new"><button>Add a New Comment!</button></a>
         </div>
         {
-            apps.map((app, index) => {
+            apps.map((app) => {
                 return (
-                    <li key={index}>
-                        <a href={`/apps/${index}`}>
+                    <li key={app.id}>
+                        <a href={`/apps/${app.id}`}>
                             {app.comment}
                         </a>
                     </li>
