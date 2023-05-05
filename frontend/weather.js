@@ -1,6 +1,13 @@
+const router = require('express').Router()
+const weather = require('../models/weather')
+
+router.post('/weather', async (req, res) => {
+  const weather = await new Weather(req.body).save()
+  res.json(Weather)
+})
+
 const apiKey = "863242cfb2b1d357e6093d9a4df19a4b";
-const apiUrl =
-  "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+const apiUrl ="https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
 const searchBox = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search button");
@@ -62,3 +69,4 @@ searchBtn.addEventListener("click", () => {
 });
 
 checkWeather();
+module.exports = router
