@@ -4,6 +4,10 @@
   "description": "Milestone Project 2 Weather App\r This is a fullstack simple weather App that displays the current weather, daily forecasts, and hourly forecasts based on geo-location or search. Search the city, state, or country to get the current weather updates.",
   "main": "index.js",
   "dependencies": {
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.12.3",
     "accepts": "^1.3.8",
     "array-flatten": "^1.1.1",
     "body-parser": "^1.20.1",
@@ -53,6 +57,9 @@
     "qs": "^6.11.0",
     "range-parser": "^1.2.1",
     "raw-body": "^2.5.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
     "safe-buffer": "^5.2.1",
     "safer-buffer": "^2.1.2",
     "send": "^0.18.0",
@@ -64,10 +71,11 @@
     "type-is": "^1.6.18",
     "unpipe": "^1.0.0",
     "utils-merge": "^1.0.1",
-    "vary": "^1.1.2"
+    "vary": "^1.1.2",
+    "weather-icons-react": "^1.2.0"
   },
   "scripts": {
-    "dev": "npx nodemon index.js -e js,jsx"
+    "dev": "npx nodemon index.js"
   },
   "repository": {
     "type": "git",
